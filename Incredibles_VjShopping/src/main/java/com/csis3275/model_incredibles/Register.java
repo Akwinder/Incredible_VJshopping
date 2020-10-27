@@ -3,8 +3,16 @@ package com.csis3275.model_incredibles;
 public class Register {
 	private String firstName;
 	private String lastName;
-	private String email;
+	public String email;
 	private String password;
+	private String phoneNumber;
+	
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
 	public String getFirstName() {
 		return firstName;
 	}

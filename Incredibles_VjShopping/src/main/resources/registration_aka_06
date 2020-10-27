@@ -1,0 +1,12 @@
+DROP TABLE registration IF EXISTS;
+CREATE TABLE registration (
+firstName VARCHAR(30),
+lastName VARCHAR(50),
+email VARCHAR(20),
+password VARCHAR(50),
+phoneNumber VARCHAR(20)
+ );
+
+INSERT INTO registration (firstName, lastName,email,password,phoneNumber) VALUES ('Akwinder', 'kaur','kaura95@gmail.com','akpunia','7786889090');
+INSERT INTO registration (firstName, lastName,email,password,phoneNumber) VALUES ('Varinder', 'kaur','kaurv6@gmail.com','vkaur','7786887070');
+INSERT INTO registration (firstName, lastName,email,password,phoneNumber) VALUES ('gaurav', 'rana','ranag@gmail.com','ranag','6045678909')

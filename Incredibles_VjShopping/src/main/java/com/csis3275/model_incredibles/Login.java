@@ -1,7 +1,7 @@
 package com.csis3275.model_incredibles;
 
 public class Login {
-private String userName;
+public String userName;
 private String password;
 public String getUserName() {
 	return userName;

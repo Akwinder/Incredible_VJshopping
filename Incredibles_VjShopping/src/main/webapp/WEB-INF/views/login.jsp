@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>Login</h1>
-UserNmae: <input type="text"/><br/>
+User Name: <input type="text"/><br/>
 Password: <input type="password"/><br/>
 <button type="submit">Submit</button>
 </body>
