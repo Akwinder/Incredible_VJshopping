@@ -17,8 +17,8 @@
 <h2>Registration form</h2>
 
 
-<form:form action="${pageContext.request.contextPath}/registration/"
-	cssClass="form-horizontal" method="post" modelAttribute="admins">
+<form:form action="${pageContext.request.contextPath}/userregistration/"
+	cssClass="form-horizontal" method="post" modelAttribute="users">
 
 	<div class="form-group">
 		<label for="firstName" class="col-md-3 control-label">First
