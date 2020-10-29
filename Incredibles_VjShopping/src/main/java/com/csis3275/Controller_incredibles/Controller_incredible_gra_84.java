@@ -7,13 +7,15 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.csis3275.DAO_incredibles.incredible_DOA_gra_84;
-
+import com.csis3275.model_incredibles.Home_vka_86;
+import com.csis3275.model_incredibles.Login;
 import com.csis3275.model_incredibles.UserRegister;
 
 @Controller
@@ -48,6 +50,12 @@ public class Controller_incredible_gra_84 {
 	    model.addAttribute("msg", "Please Enter Your Login Details");
 	    return "Userlogin_gra_84";
 	  }
+	@RequestMapping("/login")
+	public String home(ModelMap model) {
+		Login login = new Login();
+		model.addAttribute("userLog", login);
+		return "login";
+	}
 
 	@PostMapping("/userlogin")
 	  public String submit(@ModelAttribute("users") UserRegister userlogin, Model model) {
@@ -62,12 +70,12 @@ public class Controller_incredible_gra_84 {
         if(hello == true )
          {
         	model.addAttribute("msg", userlogin.getEmail());
-        	return "home_vka_86";
+        	return "Userlogin_gra_84";
          }
          else
          {
         	 model.addAttribute("error", "Invalid Details or user name is taken");
-        	 return "home_vka_86";
+        	 return "Userlogin_gra_84";
          }
         	 
         }
