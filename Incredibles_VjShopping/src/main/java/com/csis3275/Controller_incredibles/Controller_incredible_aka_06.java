@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.csis3275.DAO_incredibles.incredible_DAO_aka_06;
 
 import com.csis3275.model_incredibles.Register;
+import com.csis3275.model_incredibles.UserRegister;
 
 @Controller
 public class Controller_incredible_aka_06 {
@@ -48,6 +49,42 @@ public class Controller_incredible_aka_06 {
 		
 		return "redirect:/login";
 	}
+	
+	@GetMapping("/adminlogin")
+	  public String init(Model model) {
+	    model.addAttribute("msg", "Please Enter Login Details");
+	    return "adminlogin_aka_06";
+	  }
+
+	@PostMapping("/adminlogin")
+	  public String submit(@ModelAttribute("admins") Register userlogin, Model model) {
+		
+		 		 
+         
+      if (userlogin != null && userlogin.getEmail() != null && userlogin.getPassword() != null) {
+      	
+      	
+      	boolean hello = adminDaoImpl.authenticateAdmin(userlogin.getEmail(),userlogin.getPassword());
+      	
+      if(hello == true )
+       {
+      	model.addAttribute("msg", userlogin.getEmail());
+      	return "home_vka_86";
+       }
+       else
+       {
+      	 model.addAttribute( "Invalid Details or user name is taken");
+      	 return "adminlogin_aka_06";
+       }
+      	 
+      }
+      else
+      {
+     	 model.addAttribute( "Please enter Details");
+     	 return "home_vka_86";
+      }
+
+    }
 	
 
  }

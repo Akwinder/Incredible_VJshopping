@@ -43,8 +43,9 @@ p {
 div {
 	text-align: center;
 }
-</style>
-<title>Selfies of Team Members</title>
+</style
+<title>Registartion</title>
+
 </head>
 <body style="background-color: powderblue;">
 	<h1></h1>

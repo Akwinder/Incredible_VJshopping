@@ -28,6 +28,14 @@ public class Controller_incredible_gra_84 {
 		return new UserRegister();
 	}
 	
+
+	@RequestMapping("/login")
+	public String home(ModelMap model) {
+		Login login = new Login();
+		model.addAttribute("userLog", login);
+		return "login";
+	}
+
 	@GetMapping("/userregistration")
 	public String showadmins(HttpSession session, Model model) {
 		List<UserRegister> user = adminDaoImpl.getAllAdmin();
@@ -50,6 +58,7 @@ public class Controller_incredible_gra_84 {
 	    model.addAttribute("msg", "Please Enter Your Login Details");
 	    return "Userlogin_gra_84";
 	  }
+
 	@RequestMapping("/login")
 	public String home(ModelMap model) {
 		Login login = new Login();
@@ -70,7 +79,10 @@ public class Controller_incredible_gra_84 {
         if(hello == true )
          {
         	model.addAttribute("msg", userlogin.getEmail());
-        	return "Userlogin_gra_84";
+
+        	return "home_vka_86"
+       
+
          }
          else
          {
