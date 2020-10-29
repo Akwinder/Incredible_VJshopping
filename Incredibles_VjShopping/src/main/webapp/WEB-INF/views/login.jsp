@@ -43,8 +43,9 @@ p {
 div {
 	text-align: center;
 }
-</style>
+</style
 <title>Registartion</title>
+
 </head>
 <body style="background-color: powderblue;">
 	<h1></h1>

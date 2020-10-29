@@ -33,6 +33,7 @@ public class incredible_DAO_aka_06 {
 				admin.getPassword(), admin.getPhoneNumber()) > 0;
 	}
 	
+
 	public boolean authenticateAdmin(String userName,String password)
     {try {
         String userNameDB = (String) jdbcTemplate.queryForObject(
@@ -50,5 +51,6 @@ public class incredible_DAO_aka_06 {
     return false;
        
     }
+
 	     
 }
