@@ -7,7 +7,6 @@ import com.csis3275.model_incredibles.Home_vka_86;
 import com.csis3275.model_incredibles.womenClothes;
 
 @Controller
-//@RequestMapping("/profile")
 public class Controller_incredible_vka_86 {
 
 
