@@ -159,20 +159,18 @@ button {
 			height="80" />
 		<div class="navbar">
 
-			<a href="http://localhost:8080/Incredibles_VjShopping/login"
-				style="position: absolute; right: 300px; top: 10px;">Login</a><a
-				href="http://localhost:8080/Incredibles_VjShopping/registration"
-				style="position: absolute; right: 200px; top: 10px;">Registration</a>
+			<a href="http://localhost:8080/Incredibles_VjShopping/home"style="position: absolute; right: 200px; top: 10px;">Logout</a>
+
 			<a href="http://localhost:8080/Incredibles_VjShopping/cart/CartIndex_vka_86"
 				style="position: absolute; right: 120px; top: 20px color:red;"><i
 				class="fa fa-shopping-cart fa_custom fa-2x"></i></a><br /> <br /> <br />
-			<br /> <a href="http://localhost:8080/Incredibles_VjShopping/home">Home</a>
+			<br /> <a href="http://localhost:8080/Incredibles_VjShopping/logout">Home</a>
 			<div class="dropdown">
 				<button class="dropbtn">
 					clothes <i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="http://localhost:8080/Incredibles_VjShopping/womenClothes">Women</a> <a href="http://localhost:8080/Incredibles_VjShopping/menClothes">Men</a> <a href="#">Kids</a>
+					<a href="http://localhost:8080/Incredibles_VjShopping/product">Women</a> <a href="http://localhost:8080/Incredibles_VjShopping/menClothes">Men</a> <a href="#">Kids</a>
 				</div>
 			</div>
 
@@ -214,7 +212,7 @@ button {
 		<div class="row">
 			<div class="column">
 
-				<a href="http://localhost:8080/Incredibles_VjShopping/laptop"><img src="image/laptophome.png" class="imglogo"
+				<a href="#"><img src="image/laptophome.png" class="imglogo"
 					width="200" height="200"> </a>
 
 
@@ -231,7 +229,7 @@ button {
 
 			<div class="column">
 
-				<a href="http://localhost:8080/Incredibles_VjShopping/womenClothes"><img src="image/dresslogo.jpg" class="imglogo"
+				<a href="http://localhost:8080/Incredibles_VjShopping/product"><img src="image/dresslogo.jpg" class="imglogo"
 					width="200" height="200"> </a>
 
 			</div>
