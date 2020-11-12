@@ -49,6 +49,17 @@ public class Controller_incredible_aka_06 {
 		
 		return "redirect:/login";
 	}
+	@GetMapping("/login")
+	  public String init(Model model) {
+	    model.addAttribute("msg", "Please Enter Your Login Details");
+	    return "login";
+	  }
+	
+	@GetMapping("/adminlogin")
+	  public String init1(Model model) {
+	    model.addAttribute("msg", "Please Enter Your Login Details");
+	    return "adminlogin";
+	  }
 	
 	@GetMapping("/adminlogin")
 	  public String init(Model model) {

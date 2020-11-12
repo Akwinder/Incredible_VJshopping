@@ -17,6 +17,7 @@ import com.csis3275.DAO_incredibles.incredible_DOA_gra_84;
 import com.csis3275.model_incredibles.Home_vka_86;
 import com.csis3275.model_incredibles.Login;
 import com.csis3275.model_incredibles.UserRegister;
+import com.csis3275.model_incredibles.userLogin;
 
 @Controller
 public class Controller_incredible_gra_84 {
@@ -67,21 +68,20 @@ public class Controller_incredible_gra_84 {
 	}
 
 	@PostMapping("/userlogin")
-	  public String submit(@ModelAttribute("users") UserRegister userlogin, Model model) {
+	  public String submit(@ModelAttribute("user") userLogin user, Model model) {
 		
-		 		 
+				 
            
-        if (userlogin != null && userlogin.getEmail() != null && userlogin.getPassword() != null) {
+        if (user != null && user.getUserName() != null && user.getPassword() != null) {
         	
         	
-        	boolean hello = adminDaoImpl.authenticateUser(userlogin.getEmail(),userlogin.getPassword());
+        	boolean hello = adminDaoImpl.authenticateUser(user.getUserName(),user.getPassword());
         	
         if(hello == true )
          {
-        	model.addAttribute("msg", userlogin.getEmail());
 
-        	return "home_vka_86"
-       
+        	model.addAttribute("msg", user.getUserName());
+        	return "home_vka_86";
 
          }
          else
@@ -94,7 +94,7 @@ public class Controller_incredible_gra_84 {
         else
         {
        	 model.addAttribute("error", "Please enter Details");
-       	 return "home_vka_86";
+       	 return "Userlogin_gra_84";
         }
 
  }
