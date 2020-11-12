@@ -180,7 +180,7 @@ button {
 					Fashion <i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="http://localhost:8080/Incredibles_VjShopping/womenClothes">Women</a>
+					<a href="http://localhost:8080/Incredibles_VjShopping/product">Women</a>
 					<a href="#">Men</a> <a href="#">Kids</a>
 				</div>
 			</div>
