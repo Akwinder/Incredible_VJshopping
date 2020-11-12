@@ -43,7 +43,7 @@ p {
 div {
 	text-align: center;
 }
-</style
+</style>
 <title>Registartion</title>
 
 </head>
