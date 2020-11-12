@@ -26,6 +26,9 @@ tr:nth-child(even) {
 <body>
 
 	<h3>Products Page</h3>
+	<header>
+	<a href="http://localhost:8080/Incredibles_VjShopping/logout"><img src="${pageContext.request.contextPath }/image/homeIcon.png" width="30"/></a>
+	</header>
 	<table  border="1">
 		<tr>
 			<th>Id</th>

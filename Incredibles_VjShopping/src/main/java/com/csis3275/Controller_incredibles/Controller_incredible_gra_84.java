@@ -63,7 +63,7 @@ public class Controller_incredible_gra_84 {
         if(hello == true )
          {
         	model.addAttribute("msg", user.getUserName());
-        	return "home_vka_86";
+        	return "homeLoggedIn_vka_86";
          }
          else
          {

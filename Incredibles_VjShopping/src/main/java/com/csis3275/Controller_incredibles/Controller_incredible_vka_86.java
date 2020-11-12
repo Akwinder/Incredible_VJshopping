@@ -35,6 +35,12 @@ public class Controller_incredible_vka_86 {
 		model.addAttribute("home", home);
 		return "home_vka_86";
 	}
+	@RequestMapping("/logout")
+	public String home2(ModelMap model) {
+		Home_vka_86 home = new Home_vka_86();
+		model.addAttribute("home", home);
+		return "homeLoggedIn_vka_86";
+	}
 	
 	@RequestMapping(value = "/menClothes")
 	public String menClothes(ModelMap model) {
