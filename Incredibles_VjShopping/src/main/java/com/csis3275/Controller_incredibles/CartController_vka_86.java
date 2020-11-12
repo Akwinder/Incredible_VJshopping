@@ -25,17 +25,17 @@ public class CartController_vka_86 {
 
 		@RequestMapping(value = "buy/{id}", method = RequestMethod.GET)
 		public String buy(@PathVariable("id") String id, HttpSession session) {
-			ProductModel_gra_84 productModel = new ProductModel_gra_84();
+			ProductModel_gra_84 itemModel = new ProductModel_gra_84();
 			if (session.getAttribute("cart") == null) {
 				List<Item_vka_86> cart = new ArrayList<Item_vka_86>();
-				cart.add(new Item_vka_86(productModel.find(id), 1));
+				cart.add(new Item_vka_86(itemModel.find(id), 1));
 				session.setAttribute("cart", cart);
 			} else {
 				@SuppressWarnings("unchecked")
 				List<Item_vka_86> cart = (List<Item_vka_86>) session.getAttribute("cart");
 				int index = this.exists(id, cart);
 				if (index == -1) {
-					cart.add(new Item_vka_86(productModel.find(id), 1));
+					cart.add(new Item_vka_86(itemModel.find(id), 1));
 				} else {
 					int quantity = cart.get(index).getQuantity() + 1;
 					cart.get(index).setQuantity(quantity);
@@ -47,7 +47,9 @@ public class CartController_vka_86 {
 
 		@RequestMapping(value = "remove/{id}", method = RequestMethod.GET)
 		public String remove(@PathVariable("id") String id, HttpSession session) {
-			ProductModel_gra_84 productModel = new ProductModel_gra_84();
+			@SuppressWarnings("unused")
+			ProductModel_gra_84 itemModel = new ProductModel_gra_84();
+			@SuppressWarnings("unchecked")
 			List<Item_vka_86> cart = (List<Item_vka_86>) session.getAttribute("cart");
 			int index = this.exists(id, cart);
 			cart.remove(index);
