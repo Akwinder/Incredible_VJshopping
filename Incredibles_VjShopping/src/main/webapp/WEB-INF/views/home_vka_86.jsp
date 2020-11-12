@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +13,7 @@
 	href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/home.css">
+
 <style>
 logo {
 	float: left;
@@ -169,18 +172,20 @@ button {
 					clothes <i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="#">Women</a> <a href="#">Men</a> <a href="#">Kids</a>
+					<a href="http://localhost:8080/Incredibles_VjShopping/womenClothes">Women</a> <a href="http://localhost:8080/Incredibles_VjShopping/menClothes">Men</a> <a href="#">Kids</a>
 				</div>
 			</div>
 
-			<a href="#toys">Toys</a>
+			<a href="http://localhost:8080/Incredibles_VjShopping/toys">Toys</a>
 
 			<div class="dropdown">
 				<button class="dropbtn">
 					Fashion <i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
+
 					<a href="http://localhost:8080/Incredibles_VjShopping/product">Women</a>
+
 					<a href="#">Men</a> <a href="#">Kids</a>
 				</div>
 			</div>
@@ -189,7 +194,7 @@ button {
 					Electronics<i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-					<a href="#">Laptop</a> <a href="#">Mobile</a> <a href="#">Smart
+					<a href="http://localhost:8080/Incredibles_VjShopping/laptop">Laptop</a> <a href="#">Mobile</a> <a href="#">Smart
 						Gedgets</a>
 				</div>
 			</div>
@@ -204,13 +209,12 @@ button {
 		</div>
 	</nav>
 	<section>
-		<br>
-		<br> <a href="#"><img src="image/deal.png" width="1500"
-			height="500"></a>
+		<br> <br> <a href="#"><img src="image/deal.png"
+			width="1500" height="500"></a>
 		<div class="row">
 			<div class="column">
 
-				<a href="#"><img src="image/laptophome.png" class="imglogo"
+				<a href="http://localhost:8080/Incredibles_VjShopping/laptop"><img src="image/laptophome.png" class="imglogo"
 					width="200" height="200"> </a>
 
 
@@ -227,7 +231,7 @@ button {
 
 			<div class="column">
 
-				<a href="#"><img src="image/dresslogo.jpg" class="imglogo"
+				<a href="http://localhost:8080/Incredibles_VjShopping/womenClothes"><img src="image/dresslogo.jpg" class="imglogo"
 					width="200" height="200"> </a>
 
 			</div>
@@ -296,34 +300,39 @@ button {
 				<b>Subscribe for newsletters</b>
 			</h4>
 			<input class="subscribe" type="Email" placeholder="abc@gmail.com"
-				required><br />
-			<br />
+				required><br /> <br />
 			<button type="submit" class="subscribe">Subscribe</button>
 
 		</div>
 		<div class="column">
-			<form action="#" target="_blank">
+			
+			<form:form
+				action="http://localhost:8080/Incredibles_VjShopping/Problem"
+				modelattribute="custProblem">
 				<h4>
 					Do you have question?<br /> Go ahead.
 				</h4>
-				<p>
-					<input class="border" type="text" placeholder="Name" name="Name"
-						required>
-				</p>
-				<p>
-					<input class="border" type="text" placeholder="Email" name="Email"
-						required>
-				</p>
-				<p>
-					<input class="border" type="text" placeholder="Subject"
-						name="Subject" required>
-				</p>
-				<p>
-					<input class="border" type="text" placeholder="Message"
-						name="Message" required>
-				</p>
-				<button type="submit" class="w3-button w3-block w3-black">Send</button>
-			</form>
+				<table>
+					<tr>
+						<td><input class="border" type="text" placeholder="Name" required></td>
+					</tr>
+					<tr>
+						<td><input class="border" type="text" placeholder="Email"
+							name="email" required></td>
+					</tr>
+					<tr>
+						<td><input class="border" type="text" placeholder="Subject"
+							name="subject" required></td>
+					</tr>
+					<tr>
+						<td><input class="border" type="text" placeholder="Message"
+							name="message" required></td>
+					</tr>
+					<tr>
+						<td><button type="submit" class="button ">Send</button></td>
+					</tr>
+				</table>
+			</form:form>
 
 		</div>
 	</div>

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ body, html {
 </style>
 <body class="bg">
 </head>
-<h2>Registration form</h2>
+  <h2>Registration form</h2>
 		
 			
 <form:form action="${pageContext.request.contextPath}/userregistration/" cssClass="form-horizontal"
@@ -76,6 +76,5 @@ body, html {
 				</div>
 			</div>
 			</form:form>
- 
 </body>
 </html>
