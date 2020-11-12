@@ -55,14 +55,10 @@ public class Controller_incredible_aka_06 {
 	    return "login";
 	  }
 	
-	@GetMapping("/adminlogin")
-	  public String init1(Model model) {
-	    model.addAttribute("msg", "Please Enter Your Login Details");
-	    return "adminlogin";
-	  }
+
 	
 	@GetMapping("/adminlogin")
-	  public String init(Model model) {
+	  public String init1(Model model) {
 	    model.addAttribute("msg", "Please Enter Login Details");
 	    return "adminlogin_aka_06";
 	  }

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.csis3275.DAO_incredibles.incredibles_DAO_vka_86;
 import com.csis3275.model_incredibles.Home_vka_86;
-import com.csis3275.model_incredibles.ProductLine_vka_86;
+
 import com.csis3275.model_incredibles.products_vka_86;
 import com.csis3275.model_incredibles.womenClothes;
 
@@ -51,13 +51,6 @@ public class Controller_incredible_vka_86 {
 		return "WomenClothes_vka_86";
 	}
 	
-	@RequestMapping(value = "/laptop")
-	public String laptop(ModelMap model) {
-		ProductLine_vka_86 laptop=new ProductLine_vka_86();
-		//register CustRegister=new register();
-		model.addAttribute("Laptops",laptop);
-		return "Laptops_vka_86";
-	}
 	
 	@RequestMapping(value = "/toys")
 	public String toys(ModelMap model) {
