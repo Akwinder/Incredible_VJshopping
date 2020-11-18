@@ -3,9 +3,11 @@ package com.csis3275.Controller_incredibles;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
+
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +18,8 @@ import com.csis3275.model_incredibles.Item_vka_86;
 @Controller
 @RequestMapping(value = "cart")
 public class CartController_vka_86 {
+	
+	
 	
 
 		@RequestMapping(value = "CartIndex_vka_86", method = RequestMethod.GET)
@@ -65,6 +69,23 @@ public class CartController_vka_86 {
 			}
 			return -1;
 		}
-
-	
+		
+		@RequestMapping(value = "update/{quantity}", method = RequestMethod.GET)
+		public String update() {
+			return "cart/CartIndex_vka_86";
+		}
+		
+		@RequestMapping(value = "update/{quantity}", method = RequestMethod.POST)
+		public String update(@PathVariable("id") String id,HttpServletRequest request, HttpSession session) {
+			@SuppressWarnings("unchecked")
+			List<Item_vka_86> cart = (List<Item_vka_86>) session.getAttribute("cart");
+			String[] quantity=request.getParameterValues("quantity");
+			for (int i = 0; i < cart.size(); i++) {
+			cart.get(i).setQuantity(Integer.parseInt(quantity[i]));		
+				}
+			session.setAttribute("CartIndex_vka_86", cart);
+			return "redirect:/cart/CartIndex_vka_86";
+		}
+		
+		
 }
