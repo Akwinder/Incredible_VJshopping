@@ -44,7 +44,7 @@ tr:nth-child(even) {
 				<td><img src="image/${product.photo }" width="100"></td>
 				<td>${product.price }</td>
 				<td align="center">
-					<a href="${pageContext.request.contextPath }/cart/buy/${product.id}">Buy Now</a>
+					<a href="${pageContext.request.contextPath }/cart/buy/${product.id}">Add to cart</a>
 				</td>
 			</tr>
 		</c:forEach>
